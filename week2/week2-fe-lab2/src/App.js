@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-
+/*
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload, or not, up to you.
+          Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -18,6 +18,27 @@ function App() {
           Learn React
         </a>
       </header>
+    </div>
+  );
+}
+  */
+
+// App.js
+function Hello() {
+  return <p>Hello, React!</p>;
+}
+
+// App.js
+function Bye() {
+  return <p>Goodbye, React!</p>;
+}
+
+// App.js
+function App() {
+  return (
+    <div>
+      <Hello />
+      <Bye />
     </div>
   );
 }
