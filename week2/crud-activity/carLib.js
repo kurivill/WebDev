@@ -31,13 +31,6 @@ const Car = {
 module.exports = Car;
 
 
-
-
-
-
-
-
-
 function addOne(model, color, age) {
     if (!model || !color || !age) {
         return false;
