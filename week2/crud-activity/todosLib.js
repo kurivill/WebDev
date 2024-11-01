@@ -14,8 +14,6 @@ if (require.main === module) {
 }
 
 
-
-
 const toDo = {
     addOne,
     getAll,
@@ -23,6 +21,8 @@ const toDo = {
     updateOneById,
     deleteOneById
 };
+
+module.exports = toDo;
 
 function addOne(task, completed, dueDate) {
     if (!task || !completed || !dueDate) {
