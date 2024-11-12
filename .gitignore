@@ -2,3 +2,5 @@ node_modules/
 .~lock.*
 *.ods
 reflection-journals/
+README.md
+.idea
