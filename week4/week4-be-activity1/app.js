@@ -1,7 +1,7 @@
 const connectDB = require("./config/db");
 const express = require("express");
 // const carRouter = require("./routes/carRouter");
-// const userRouter = require('./routes/userRouter');
+const userRouter = require('./routes/userRouter');
 const blogRouter = require("./routes/blogRouter");
 
 const { requestLogger, unknownEndpoint, errorHandler } = require("./middleware/customMiddleware");
@@ -18,8 +18,10 @@ app.use(requestLogger);
 
 app.get("/", (req, res) => res.send("API Running!"));
 
-// Fixed typo here
+
 app.use("/api/blogs", blogRouter);
+
+app.use("/api/users", userRouter);
 
 app.use(unknownEndpoint);
 
