@@ -1,16 +1,16 @@
 const connectDB = require("./config/db");
 const express = require("express");
-const carRouter = require("./routes/carRouter");
+// const carRouter = require("./routes/carRouter");
 // const userRouter = require('./routes/userRouter');
-// const blogRouter = require("./routes/blogRouter");
+const blogRouter = require("./routes/blogRouter");
 
-const {requestLogger,unknownEndpoint,errorHandler} = require("./middleware/customMiddleware");
-  
+const { requestLogger, unknownEndpoint, errorHandler } = require("./middleware/customMiddleware");
+
 // express app
 const app = express();
 
 connectDB();
- 
+
 // middleware
 app.use(express.json());
 
@@ -18,15 +18,8 @@ app.use(requestLogger);
 
 app.get("/", (req, res) => res.send("API Running!"));
 
-// routes
-
-// Use the carRouter for all /cars routes
-app.use("/api/cars", carRouter);
-
-// Use the blogRouter for all /cars routes
-
-// Use the userRouter for all /users routes
-
+// Fixed typo here
+app.use("/api/blogs", blogRouter);
 
 app.use(unknownEndpoint);
 

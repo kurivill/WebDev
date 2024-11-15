@@ -2,5 +2,7 @@ node_modules/
 .~lock.*
 *.ods
 reflection-journals/
+week4-fe-pp
+week4-pp-be
 README.md
 .idea
